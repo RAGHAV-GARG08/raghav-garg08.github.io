@@ -2,9 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#09090b" />
+    <style>
+      html,
+      body,
+      #root {
+        background: #09090b;
+        min-height: 100%;
+        margin: 0;
+      }
+    </style>
+    <script>
+      (function () {
+        if (location.pathname.indexOf("/portfolio") === 0) {
+          location.replace("/" + location.search + location.hash)
+          return
+        }
+        window.addEventListener(
+          "error",
+          function (event) {
+            var target = event.target
+            if (!target || (target.tagName !== "SCRIPT" && target.tagName !== "LINK")) return
+            if (sessionStorage.getItem("asset-retry")) return
+            sessionStorage.setItem("asset-retry", "1")
+            var url = new URL(location.href)
+            url.searchParams.set("v", String(Date.now()))
+            location.replace(url.toString())
+          },
+          true,
+        )
+      })()
+    </script>
     <title>Raghav Garg — Flutter Developer</title>
     <meta
       name="description"
