@@ -1,3 +1,6 @@
+const asset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`
+
 export const site = {
   name: "Raghav Garg",
   role: "Flutter Developer | Mobile Application Engineer",
@@ -6,7 +9,7 @@ export const site = {
   email: "raghavgarg1008@gmail.com",
   linkedin: "https://www.linkedin.com/in/raghav-garg-125b7a1a2/",
   github: "",
-  resumeUrl: "/Raghav_Garg_Resume.pdf",
+  resumeUrl: asset("Raghav_Garg_Resume.pdf"),
   location: "Bengaluru, India",
 }
 
@@ -157,7 +160,7 @@ export const projects: Project[] = [
     website: "https://getvecto.app/",
     playStore:
       "https://play.google.com/store/apps/details?id=com.capslock.vecto",
-    logo: "/logos/vecto.webp",
+    logo: asset("logos/vecto.webp"),
     tone: "vecto",
   },
   {
@@ -190,7 +193,7 @@ export const projects: Project[] = [
       "https://play.google.com/store/apps/details?id=com.rnselectastro",
     appStore:
       "https://apps.apple.com/in/app/vama-puja-chadhava-astro-tv/id1613296409",
-    logo: "/logos/vama.webp",
+    logo: asset("logos/vama.webp"),
     tone: "vama",
   },
   {
@@ -207,7 +210,7 @@ export const projects: Project[] = [
     website: "https://www.adda247.com/",
     playStore: "https://play.google.com/store/apps/details?id=com.adda247.app",
     appStore: "https://apps.apple.com/in/app/adda247/id1618943840",
-    logo: "/logos/adda247.webp",
+    logo: asset("logos/adda247.webp"),
     tone: "adda",
   },
 ]
@@ -223,7 +226,7 @@ export const otherProjects: OtherProject[] = [
   {
     name: "JhallakAI",
     initials: "JA",
-    logo: "/logos/jhallakai.png",
+    logo: asset("logos/jhallakai.png"),
     website: "https://jhalakai.app/",
     playStore:
       "https://play.google.com/store/apps/details?id=com.capslock.jhalakai",
@@ -232,7 +235,7 @@ export const otherProjects: OtherProject[] = [
   {
     name: "Vokey",
     initials: "VK",
-    logo: "/logos/vokey.png",
+    logo: asset("logos/vokey.png"),
     website: "https://vokeyapp.com/",
     playStore:
       "https://play.google.com/store/apps/details?id=com.capslock.vokey",
@@ -241,7 +244,7 @@ export const otherProjects: OtherProject[] = [
   {
     name: "ShantiClub",
     initials: "SC",
-    logo: "/logos/shanticlub.webp",
+    logo: asset("logos/shanticlub.webp"),
     playStore:
       "https://play.google.com/store/apps/details?id=com.capslock.shanticlub",
     tone: "shanti",
@@ -249,7 +252,7 @@ export const otherProjects: OtherProject[] = [
   {
     name: "VAMA Partner",
     initials: "VP",
-    logo: "/logos/vama-partner.webp",
+    logo: asset("logos/vama-partner.webp"),
     playStore:
       "https://play.google.com/store/apps/details?id=com.rnselectastro.ast",
     tone: "vama",
@@ -257,7 +260,7 @@ export const otherProjects: OtherProject[] = [
   {
     name: "Learner App",
     initials: "LA",
-    logo: "/logos/learner.webp",
+    logo: asset("logos/learner.webp"),
     website: "https://www.learnr.co.in/",
     playStore: "https://play.google.com/store/apps/details?id=com.adda247.gold",
     tone: "adda",
