@@ -34,7 +34,7 @@ The production output is static files in `dist/`. GitHub Pages is configured for
 2. Under **Build and deployment → Source**, choose **GitHub Actions**.
 3. Push to `main`. The workflow in `.github/workflows/deploy.yml` builds the site and publishes `dist/`.
 
-The live URL is `https://raghav-garg08.github.io/portfolio/`.
+The live URL is `https://raghav-garg08.github.io/`.
 
 - **Vercel:** Import the repo and use the default Vite preset (`npm run build`, output `dist`). Set the root path if you are not using GitHub Pages.
 - **Netlify:** Same build command and publish directory `dist`.
